@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: AGPL-3.0
+#
+# Maintainer: Truocolo <truocolo@aol.com>
+# Maintainer: Pellegrino Prevete (tallero) <pellegrinoprevete@gmail.com>
 # Maintainer: Kyle Keen <keenerd@gmail.com>
 # Contributor: Will Shanks <wsha dot code at g mail dot com>
 
@@ -32,3 +36,4 @@ package() {
   python -m installer --destdir="$pkgdir" dist/*.whl
   install -Dm644 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/python-$_pkgname/LICENSE"
 }
+

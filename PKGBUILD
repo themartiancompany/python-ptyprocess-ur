@@ -91,3 +91,4 @@ package() {
     "${srcdir}/LICENSE" \
     "${pkgdir}/usr/share/licenses/python-${_pkgname}/LICENSE"
 }
+

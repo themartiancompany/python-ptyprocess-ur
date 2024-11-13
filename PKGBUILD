@@ -53,11 +53,12 @@ sha512sums=(
 
 prepare() {
   cd \
-    "$srcdir"
-  cp \
-    -r \
-    "${_pkgname}-${pkgver}" \
-    "${_pkgname}2-${pkgver}"
+    "${srcdir}"
+  # python2
+  # cp \
+  #   -r \
+  #   "${_pkg}-${pkgver}" \
+  #   "${_pkg}2-${pkgver}"
   mv \
     "LIC-pty-${pkgver}" \
     "LICENSE"
@@ -65,7 +66,7 @@ prepare() {
 
 build() {
   cd \
-    "${srcdir}/${_pkgname}-${pkgver}"
+    "${srcdir}/${_pkg}-${pkgver}"
   "${_py}" \
     -m \
       build \
@@ -82,7 +83,7 @@ package() {
     --destdir="${pkgdir}"
   )
   cd \
-    "${srcdir}/${_pkgname}-${pkgver}"
+    "${srcdir}/${_pkg}-${pkgver}"
   "${_py}" \
     "${_opts[@]}" \
     dist/*.whl
